@@ -13,10 +13,10 @@ from langchain_core.output_parsers import StrOutputParser
 import time
 
 # Set environment variables for LangChain and Hugging Face API keys
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "hf_hAfWmGdtFaYncVGkfakEMWrWysYquTYZGq"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 os.environ['LANGCHAIN_TRACING_V2'] = 'true'
 os.environ['LANGCHAIN_ENDPOINT'] = 'https://api.smith.langchain.com'
-os.environ['LANGCHAIN_API_KEY'] = "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"
+os.environ['LANGCHAIN_API_KEY'] = "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"
 
 # Define model repository IDs for each model option
 model_repo_ids = {
@@ -296,5 +296,5 @@ else:
                 else:
                     st.write(message.content)
         elif isinstance(message, HumanMessage):
-            with st.chat_message("Human", avatar=r"A:\SEM 7\SDP\PROJECT-01\NewSDP\src\human.png"):
+            with st.chat_message("Human", avatar=r"human.png"):
                 st.write(message.content)
