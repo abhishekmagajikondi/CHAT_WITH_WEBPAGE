@@ -2,7 +2,7 @@ import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.llms.huggingface_endpoint import HuggingFaceEndpoint
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -36,7 +36,7 @@ def get_vectorstore_from_url(url):
     
     # Create vector store from document chunks
     embeddings = HuggingFaceEmbeddings()
-    vector_store = Chroma.from_documents(document_chunks, embeddings)
+    vector_store = FAISS.from_documents(document_chunks, embeddings)
     return vector_store
 
 def get_context_retriever_chain(vector_store, model):
