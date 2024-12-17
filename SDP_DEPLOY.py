@@ -242,16 +242,16 @@ model = st.radio(
 )
 
 if model is "mixtral-8x22b":
-    avatar = r"main\mistral_icon.png"
+    avatar = r"mistral_icon.png"
 
 elif model is "gemini":
-    avatar = r"main\google-gemini-icon.png"
+    avatar = r"google-gemini-icon.png"
     
 elif model is "llama-3-8B" :
-    avatar = r"A:\SEM 7\SDP\PROJECT-01\NewSDP\src\Llama_Icon-removebg-preview.png"
+    avatar = r"Llama_Icon-removebg-preview.png"
     
 elif model is "microsoft-phi":
-    avatar = r"A:\SEM 7\SDP\PROJECT-01\NewSDP\src\microsoft.png"
+    avatar = r"microsoft.png"
 
 # Sidebar for website URL input
 with st.sidebar:
