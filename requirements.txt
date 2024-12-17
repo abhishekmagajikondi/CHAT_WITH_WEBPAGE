@@ -1,0 +1,14 @@
+streamlit==1.30.0
+langchain==0.1.13
+langchain-core==0.1.44
+langchain-community==0.0.34
+huggingface-hub==0.21.0
+chromadb==0.4.24
+unstructured==0.12.5
+tiktoken==0.5.2
+pydantic==1.10.13
+pillow==10.2.0
+numpy==1.26.4
+sentence-transformers==2.2.2
+requests==2.31.0
+python-dotenv==1.0.1
