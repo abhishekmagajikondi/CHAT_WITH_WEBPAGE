@@ -11,3 +11,4 @@ numpy
 sentence-transformers
 requests
 python-dotenv
+beautifulsoup4
