@@ -36,7 +36,7 @@ def get_vectorstore_from_url(url):
     
     # Create vector store from document chunks
     embeddings = HuggingFaceEmbeddings()
-    vector_store = Chroma.from_documents(document_chunks, embeddings, persist_directory="./chroma_db")
+    vector_store = Chroma.from_documents(document_chunks, embeddings)
     return vector_store
 
 def get_context_retriever_chain(vector_store, model):
