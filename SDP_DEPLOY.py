@@ -242,10 +242,10 @@ model = st.radio(
 )
 
 if model is "mixtral-8x22b":
-    avatar = r"A:\SEM 7\SDP\PROJECT-01\NewSDP\src\mistral_icon.png"
+    avatar = r"main\mistral_icon.png"
 
 elif model is "gemini":
-    avatar = r"A:\SEM 7\SDP\PROJECT-01\NewSDP\src\google-gemini-icon.png"
+    avatar = r"main\google-gemini-icon.png"
     
 elif model is "llama-3-8B" :
     avatar = r"A:\SEM 7\SDP\PROJECT-01\NewSDP\src\Llama_Icon-removebg-preview.png"
