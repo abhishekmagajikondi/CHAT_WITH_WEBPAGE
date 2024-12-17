@@ -3,7 +3,7 @@ langchain
 langchain-core
 langchain-community
 huggingface-hub
-chromadb
+chromadb>=0.4.24
 tiktoken
 pydantic
 pillow
