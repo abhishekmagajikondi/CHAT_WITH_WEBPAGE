@@ -3,7 +3,6 @@ langchain
 langchain-core
 langchain-community
 huggingface-hub
-chromadb>=0.4.24
 tiktoken
 pydantic
 pillow
@@ -12,3 +11,4 @@ sentence-transformers
 requests
 python-dotenv
 beautifulsoup4
+faiss-cpu 
