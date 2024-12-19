@@ -2,7 +2,7 @@ import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import FAISS
+from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.llms.huggingface_endpoint import HuggingFaceEndpoint
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -11,12 +11,14 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 import os
 from langchain_core.output_parsers import StrOutputParser
 import time
+from langchain_community.vectorstores import FAISS
+
 
 # Set environment variables for LangChain and Hugging Face API keys
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "hf_hAfWmGdtFaYncVGkfakEMWrWysYquTYZGq"
 os.environ['LANGCHAIN_TRACING_V2'] = 'true'
 os.environ['LANGCHAIN_ENDPOINT'] = 'https://api.smith.langchain.com'
-os.environ['LANGCHAIN_API_KEY'] = "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"
+os.environ['LANGCHAIN_API_KEY'] = "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"
 
 # Define model repository IDs for each model option
 model_repo_ids = {
@@ -168,9 +170,8 @@ def get_final_rag_chain(user_query , questions , answers , model):
     {context}
 
     Use these to synthesize an answer to the question: {question}
-    """
-    
-    
+    """
+
     prompt = ChatPromptTemplate.from_template(template)
 
     final_rag_chain = (
