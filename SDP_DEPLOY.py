@@ -163,13 +163,15 @@ def get_final_rag_chain(user_query , questions , answers , model):
     llm = HuggingFaceEndpoint(repo_id=repo_id,temperature=0.8)
     
     # Prompt
+   
     template = """Here is a set of Q+A pairs:
 
     {context}
-
-    Use these to synthesize an answer to the question: {question}
-    """
-
+    
+    Use these to synthesize a concise answer to the question: {question}
+    
+    The answer should be brief and to the point, ideally in one or two sentences."""
+    
     prompt = ChatPromptTemplate.from_template(template)
 
     final_rag_chain = (
